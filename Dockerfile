@@ -5,3 +5,5 @@ MAINTAINER Vikram Chauhan <chauhanv@outlook.com>
 RUN apt-get -y update \
  && apt-get -y install php5-mysql \
  && docker-php-ext-install -j$(nproc) pdo_mysql
+
+COPY php.ini /usr/local/etc/php/
